@@ -58,6 +58,7 @@ export default async function handler(req, res) {
         body: bufferStream,
       },
       fields: 'id, webViewLink',
+      supportsAllDrives: true,
     });
 
     return res.status(200).json({ success: true, url: driveRes.data.webViewLink });
